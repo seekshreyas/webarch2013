@@ -2,5 +2,43 @@
 ** Author: Shreyas;
 ** Email: shreyas@ischool.berkeley.edu;
 ** 
-** GLOBAL STYLES
+** PAGE SPECIFIC Styles
 */
+
+
+/* over-riding the CSS reset */
+ul {
+	list-style:disc;
+}
+ol{
+	list-style:decimal;
+}
+
+ul, ol{
+	list-style-position: inside;
+}
+
+h2, h3, h4, h5{
+	font-family: "OpenSans Semi Bold";
+	margin:2em 0 0 0;
+}
+
+figcaption{
+	font-family:"OpenSans Light Italic";
+	color:#999;
+}
+
+figcaption::after{
+	content:" !"
+}
+
+q, blockquote{
+	color:#999;
+	font-family: "OpenSans Light Italic";
+	margin:1em;
+	float:left;
+}
+
+q::after, q::before{
+	content:" '' ";
+}
