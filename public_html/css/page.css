@@ -39,6 +39,7 @@ q, blockquote{
 	float:left;
 }
 
-q::after, q::before{
+q::after, q::before,
+blockquote::after, blockquote::before{
 	content:" '' ";
 }
