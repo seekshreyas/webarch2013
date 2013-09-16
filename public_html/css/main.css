@@ -109,6 +109,12 @@ section{
 		float:left;
 	}
 
+		figure{
+			float: right;
+			text-align: right;
+			margin: 0 2em 0 0;
+		}
+
 	article{
 		width:57%;
 		padding:0 1%;

@@ -18,6 +18,8 @@ ul, ol{
 	list-style-position: inside;
 }
 
+
+/* over-riding the Font Family */
 h2, h3, h4, h5{
 	font-family: "OpenSans Semi Bold";
 	margin:2em 0 0 0;
