@@ -146,7 +146,7 @@ textarea {
 
 body{
     background: rgb(236, 240, 241);
-    font-family: "OpenSans Light", Helvetica, Arial, sans-serif;
+    font-family: 'OpenSans Light', Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5em;
     color:#333;
@@ -156,6 +156,28 @@ body{
 .wrapper-page{
     width:960px;
     margin:0 auto;
+}
+
+section {
+    margin:3em 0;
+    float:left;
+    width:100%;
+}
+
+/* ul,ol */
+.generallist{
+    list-style: none;
+    float:left;
+    width:100%;
+}
+    .generallist li{
+        float:left;
+    }
+
+
+em {
+    font-style:normal;
+    font-family: 'OpenSans Light Italic', sans-serif;
 }
 
 
@@ -185,10 +207,92 @@ header{
         font-size:2em;
     }
 
+    h1 + p{
+        text-align:center;
+    }
+
+
+/*
+** MODULE:: form;
+*/
+
+/* form */
+.generalform{
+    float:left;
+    width:100%;
+}
+    .generalform fieldset{
+        border:1px dashed #bfbfbf;
+        margin:0.5em 0;
+    }
+
+    fieldset.fieldgroup-sub{
+        border:none;
+    }
+
+        .fieldgroup-sub input[type=submit]{
+            float:right;
+            margin:0.5em 1em;
+        }
+
+    .generalform legend{
+        margin:1em;
+        background:#fff;
+        padding:0.5em;
+    }
+
+        .generalform ul > li{
+            width:98%;
+            margin:0.5em 1%;
+        }
+                .generalform ul > li > label{
+                    float:left;
+                    width:29%;
+                    text-align:right;
+                    padding:0 0.5%;
+                }
+
+                .generalform ul > li > label::after{
+                    content: " :";
+                }
+
+
+        .generalform ol {
+            width:60%;
+            margin:0;
+            padding:0;
+        }
+            .generalform ol li{
+                width:30%;
+                magin:0;
+                padding:0;
+            }
 
 
 
+/*
+** MODULE:: STORY;
+*/
 
+/*section*/
+#wrapper-story{
+    margin:3em 0;
+}
+
+    #wrapper-story article{
+        float:left;
+        width: 46%;
+        padding:0 2%;
+    }
+
+    #wrapper-madlib{
+        text-align:center;
+        background:#fff;
+    }
+
+    #wrapper-vid iframe{
+        margin:2em 0 0 2%;
+    }
 
 
 
