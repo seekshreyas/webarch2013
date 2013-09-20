@@ -1,12 +1,12 @@
-var MADLIB = MADLIB || {}
+var MADLIB = MADLIB || {};
 
 MADLIB = (function(){
 
 
 	var init = function(){
 		console.log("page loaded");
-		parseLyrics()
-	}
+		parseLyrics();
+	};
 
 
 	function parseLyrics(){
@@ -27,10 +27,10 @@ MADLIB = (function(){
 
 	return {
 		'init' : init
-	}
-})()
+	};
+})();
 
 
 jQuery(document).ready(function(){
-	MADLIB.init()
+	MADLIB.init();
 });
