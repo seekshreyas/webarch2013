@@ -289,6 +289,9 @@ header{
         text-align:center;
         background:#fff;
     }
+        #wrapper-madlib p{
+            line-height: 2em;
+        }
 
     #wrapper-vid iframe{
         margin:2em 0 0 2%;
