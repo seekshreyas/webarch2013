@@ -38,23 +38,23 @@
             			<legend>Mr S</legend>
             			<ul class="generallist">
             				<li>
-            					<label for="field-txt">Text Input</label>
-            					<input type="text" id="field-txt">
+            					<label for="field-txt">Your Favorite Teacher <em>(alphanumeric)</em></label>
+            					<input type="text" id="field-txt" required="required" pattern="^[a-zA-Z0-9_\s]*$">
             				</li>
             				<li>
-            					<label for="field-num">Num Input</label>
-            					<input type="number" id="field-num">
+            					<label for="field-num">Favorite Number <em>(num)</em></label>
+            					<input type="number" id="field-num" required="required" pattern="^[0-9]*$">
             				</li>
             				<li>
-            					<label>Radio Group label</label>
+            					<label>Favorite pet</label>
             					<ol class="generallist">
             						<li>
-            							<label for="field-rad-1">Radio Input</label>
-            							<input type="radio" id="field-rad-1">
+            							<label for="field-rad-1">Cat</label>
+            							<input type="radio" id="field-rad-1" value="cat">
             						</li>
             						<li>
-            							<label for="field-rad-2">Radio Input</label>
-            							<input type="radio" id="field-rad-2">
+            							<label for="field-rad-2">Dog</label>
+            							<input type="radio" id="field-rad-2" value="dog">
             						</li>
             					</ol>
             				</li>
@@ -64,11 +64,11 @@
             				<legend>Your Jam</legend>
             				<ul class="generallist">
             					<li>
-            						<label for="field-dropdown">Select</label>
-            						<select if="field-dropdown">
-            							<option value="A">Alpha</option>
-            							<option value="B">Beta</option>
-            							<option value="C">Gamma</option>
+            						<label for="field-dropdown">What do you do</label>
+            						<select id="field-dropdown">
+            							<option value="-">--</option>
+            							<option value="rock">Rock</option>
+            							<option value="information">Information</option>
             						</select>
             					</li>
             				</ul>
@@ -83,10 +83,10 @@
 
             <div class="wrapper-page">
             	<article id="wrapper-madlib">
-            		<p>Baby we was making straight A's, But we was stuck in a dumb daze, Don't take much to memorize your life, I feel like I've been hypnotisized, and then that magic man he come to town, whoo wee, he done spone my head around, he said recess is in session, Two and two make five, and now baby, oh I'm alive, oh yeah, I'm alive.</p>
-            		<p>And if you wanna be the teacher's pet, Well baby you just better forget it, Rock got no reason, Rock got no rhyme, You better get me to school on time.</p>
-            		<p>Oh you know I'm was on the Honor Roll, got good grades, and got no soul, raise my hand before I can speak my mind, I've been biting my tongue too many times, And then that magic man said to obey, (uh huh), do what magic man do, not what magic man say, Now could I please have the attention of the class, today's assignment, KICK SOME ASS!</p>
-            		<p>This is my final exam, now ya'll know who I am, I might not be that perfect son, but ya'll be rockin' when I'm done.</p>
+            		<p>Baby we was making straight A's, But we was stuck in a dumb daze, Don't take much to memorize your life, I feel like I've been hypnotisized, and then that <span class="val-teacher">magic man</span> <span class="val-teacher">he</span> come to town, whoo wee, <span class="val-teacher">he</span> done spone my head around, <span class="val-teacher">he</span> said recess is in session, <span class="val-favnum">Two</span> and <span class="val-favnum">two</span> make <span class="val-favnumadd">five</span>, and now baby, oh I'm alive, oh yeah, I'm alive.</p>
+            		<p>And if you wanna be the teacher's <span class="val-petname">pet</span> , Well baby you just better forget it, <span class="val-jamname">Rock</span> got no reason, <span class="val-jamname">Rock</span> got no rhyme, You better get me to school on time.</p>
+            		<p>Oh you know I'm was on the Honor Roll, got good grades, and got no soul, raise my hand before I can speak my mind, I've been biting my tongue too many times, And then that <span class="val-teacher">magic man</span> said to obey, (uh huh), do what <span class="val-teacher">magic man</span> do, not what <span class="val-teacher">magic man</span> say, Now could I please have the attention of the class, today's assignment, <strong>KICK SOME <span class="val-jamname">rock</span> ASS!</strong></p>
+            		<p>This is my final exam, now ya'll know who I am, I might not be that perfect son, but ya'll be <span class="val-jamname">rock</span>ing when I'm done.</p>
             	</article>
                 <article id="wrapper-vid">
                     <iframe width="420" height="315" src="//www.youtube.com/embed/dTkVxwVn6-E" frameborder="0" allowfullscreen></iframe>
