@@ -281,6 +281,7 @@ header{
 /*section*/
 #wrapper-story{
     margin:3em 0;
+    display:none;
 }
 
     #wrapper-story article{
@@ -295,6 +296,11 @@ header{
     }
         #wrapper-madlib p{
             line-height: 2em;
+        }
+
+        #wrapper-madlib span{
+            background: yellow;
+            font-family: 'OpenSans Regular', sans-serif;
         }
 
     #wrapper-vid iframe{
