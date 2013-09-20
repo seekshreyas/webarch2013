@@ -23,62 +23,75 @@
 
         <!-- Add your site or application content here -->
         <header>
-        	<h1>Jam with Jack Black</h1>
+            <div class="wrapper-page">
+        	   <h1>Jam with Jack Black</h1>
+                <p>by: <em>Shreyas</em></p>
+            </div>
         </header>
         <section id="wrapper-form">
 
-        	<form action="#" id="madlib-input">
-        		<fieldset>
-        			<legend>Mr S</legend>
-        			<ul class="generallist">
-        				<li>
-        					<label for="field-txt">Text Input</label>
-        					<input type="text" id="field-txt">
-        				</li>
-        				<li>
-        					<label for="field-num">Num Input</label>
-        					<input type="number" id="field-num">
-        				</li>
-        				<li>
-        					<label>Radio Group label</label>
-        					<ol class="generallist">
-        						<li>
-        							<label for="field-rad-1">Radio Input</label>
-        							<input type="radio" id="field-rad-1">
-        						</li>
-        						<li>
-        							<label for="field-rad-2">Radio Input</label>
-        							<input type="radio" id="field-rad-2">
-        						</li>
-        					</ol>
-        				</li>
-        			</ul>
-        			</fieldset>
-        			<fieldset>
-        				<legend>Jam with Mr S</legend>
-        				<ul class="generallist">
-        					<li>
-        						<label for="field-dropdown">Select</label>
-        						<select if="field-dropdown">
-        							<option value="A">Alpha</option>
-        							<option value="A">Alpha</option>
-        							<option value="A">Alpha</option>
-        						</select>
-        					</li>
-        				</ul>
-        			</fieldset>
-        			<fieldset>
-        				<input type="submit" value="Submit">
-        			</fieldset>
-        		</form>
+            <div class="wrapper-page">
+
+
+            	<form action="#" id="madlib-input">
+            		<fieldset>
+            			<legend>Mr S</legend>
+            			<ul class="generallist">
+            				<li>
+            					<label for="field-txt">Text Input</label>
+            					<input type="text" id="field-txt">
+            				</li>
+            				<li>
+            					<label for="field-num">Num Input</label>
+            					<input type="number" id="field-num">
+            				</li>
+            				<li>
+            					<label>Radio Group label</label>
+            					<ol class="generallist">
+            						<li>
+            							<label for="field-rad-1">Radio Input</label>
+            							<input type="radio" id="field-rad-1">
+            						</li>
+            						<li>
+            							<label for="field-rad-2">Radio Input</label>
+            							<input type="radio" id="field-rad-2">
+            						</li>
+            					</ol>
+            				</li>
+            			</ul>
+            			</fieldset>
+            			<fieldset>
+            				<legend>Jam with Mr S</legend>
+            				<ul class="generallist">
+            					<li>
+            						<label for="field-dropdown">Select</label>
+            						<select if="field-dropdown">
+            							<option value="A">Alpha</option>
+            							<option value="B">Beta</option>
+            							<option value="C">Gamma</option>
+            						</select>
+            					</li>
+            				</ul>
+            			</fieldset>
+            			<fieldset>
+            				<input type="submit" value="Submit">
+            			</fieldset>
+            		</form>
+                </div>
         	</section>
         <section id="wrapper-story">
-        	<article id="wrapper-madlib">
-        		<p>Baby we was making straight A's, But we was stuck in a dumb daze, Don't take much to memorize your life, I feel like I've been hypnotisized, and then that magic man he come to town, whoo wee, he done spone my head around, he said recess is in session, Two and two make five, and now baby, oh I'm alive, oh yeah, I'm alive.</p>
-        		<p>And if you wanna be the teacher's pet, Well baby you just better forget it, Rock got no reason, Rock got no rhyme, You better get me to school on time.</p>
-        		<p>Oh you know I'm was on the Honor Roll, got good grades, and got no soul, raise my hand before I can speak my mind, I've been biting my tongue too many times, And then that magic man said to obey, (uh huh), do what magic man do, not what magic man say, Now could I please have the attention of the class, today's assignment, KICK SOME ASS!</p>
-        		<p>This is my final exam, now ya'll know who I am, I might not be that perfect son, but ya'll be rockin' when I'm done.</p>
-        	</article>
+
+            <div class="wrapper-page">
+            	<article id="wrapper-madlib">
+            		<p>Baby we was making straight A's, But we was stuck in a dumb daze, Don't take much to memorize your life, I feel like I've been hypnotisized, and then that magic man he come to town, whoo wee, he done spone my head around, he said recess is in session, Two and two make five, and now baby, oh I'm alive, oh yeah, I'm alive.</p>
+            		<p>And if you wanna be the teacher's pet, Well baby you just better forget it, Rock got no reason, Rock got no rhyme, You better get me to school on time.</p>
+            		<p>Oh you know I'm was on the Honor Roll, got good grades, and got no soul, raise my hand before I can speak my mind, I've been biting my tongue too many times, And then that magic man said to obey, (uh huh), do what magic man do, not what magic man say, Now could I please have the attention of the class, today's assignment, KICK SOME ASS!</p>
+            		<p>This is my final exam, now ya'll know who I am, I might not be that perfect son, but ya'll be rockin' when I'm done.</p>
+            	</article>
+                <article id="wrapper-vid">
+                    <iframe width="420" height="315" src="//www.youtube.com/embed/dTkVxwVn6-E" frameborder="0" allowfullscreen></iframe>
+                </article>
+            </div>
         </section>
 
 
@@ -88,17 +101,11 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        
+        <!-- included so that console.log doesn't give error in IE -->
+        <script src="js/plugins.js"></script> 
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        // <script>
-        //     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        //     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        //     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        //     e.src='//www.google-analytics.com/analytics.js';
-        //     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        //     ga('create','UA-XXXXX-X');ga('send','pageview');
-        // </script>
+       
     </body>
 </html>
