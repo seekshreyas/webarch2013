@@ -1,0 +1,126 @@
+/*
+** Author: Shreyas;
+** Email: shreyas@ischool.berkeley.edu;
+** 
+** GLOBAL STYLES
+*/
+
+/*
+** GLOBAL STYLES
+*/
+
+/*fonts*/
+@font-face{    
+  font-family: 'OpenSans Regular';
+  src: url('../resources/fonts/opensans/opensans_regular.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Bold';
+  src: url('../resources/fonts/opensans/opensans_bold.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Bold Italic';
+  src: url('../resources/fonts/opensans/opensans_bold_italic.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Extra Bold';
+  src: url('../resources/fonts/opensans/opensans_extra_bold.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Extra Bold Italic';
+  src: url('../resources/fonts/opensans/opensans_extra_bold_italic.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Italic';
+  src: url('../resources/fonts/opensans/opensans_italic.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Light';
+  src: url('../resources/fonts/opensans/opensans_light.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Light Italic';
+  src: url('../resources/fonts/opensans/opensans_light_italic.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Semi Bold';
+  src: url('../resources/fonts/opensans/opensans_semibold.ttf') format('truetype'); 
+}
+@font-face{    
+  font-family: 'OpenSans Semi Bold Italic';
+  src: url('../resources/fonts/opensans/opensans_semibold_italic.ttf') format('truetype'); 
+}
+
+
+
+
+body{
+	background: rgba(236, 240, 241, 1);
+	font-family: "OpenSans Light", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color:#333;
+}
+
+/*div*/
+.wrapper-page{
+	width:960px;
+	margin:0 auto;
+}
+
+
+
+
+
+/* 
+** MODULE:: Header;
+*/
+header{
+	width:100%;
+	padding:2em 0;
+	background:#555;
+	color:#dfdfdf;
+
+}
+
+	h1{
+		font-size: 3em;
+		font-family: "OpenSans Light";
+		text-align:center;
+	}
+
+	h1 + p{
+		text-align: center;
+		margin:1.5em 0 0 0;
+	}
+
+	header  a {
+		color: #dfdfdf;
+		font-family: "OpenSans Light Italic";
+	}
+
+section{
+	padding:2em 0;
+	width:100%;
+}
+
+	aside{
+		width:40%;
+		float:left;
+	}
+
+		figure{
+			float: right;
+			text-align: right;
+			margin: 0 2em 0 0;
+		}
+
+	article{
+		width:57%;
+		padding:0 1%;
+		border-left: 1px solid #bfbfbf;
+		float:left;
+	}
+
+
+
