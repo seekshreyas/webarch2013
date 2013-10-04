@@ -77,11 +77,6 @@ def i253():
     # Comment in to set header below
     resp.headers['Content-Type'] = 'image/png'
 
-    getAcceptHeader = resp.headers['Accept']
-
-    print "Accept Header: %s" % (getAcceptHeader)
-
-
     return resp
 
 
