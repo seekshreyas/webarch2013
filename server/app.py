@@ -60,7 +60,7 @@ def wiki_put():
 def i253():
     """Returns a PNG image of madlibs text"""
     relationship = request.args.get("relationship", "friend")
-    name = request.args.get("name", "Jim")
+    name = request.args.get("name", "Shreyas")
     adjective = request.args.get("adjective", "fun")
 
     resp = flask.make_response(
@@ -73,8 +73,9 @@ def i253():
                   "text 30,60 'My %s %s said i253 was %s'" % (relationship, name, adjective),
                 '-raise', '30',
                 'png:-']), 200);
+
     # Comment in to set header below
-    # resp.headers['Content-Type'] = '...'
+    resp.headers['Content-Type'] = 'image/png'
 
     return resp
 
