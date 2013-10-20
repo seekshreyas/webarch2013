@@ -1,40 +1,111 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Madlib!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MADLIB | Shreyas</title>
+        <meta name="description" content="WebArch Assignment">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-		<form id="madlib-input">
-			<p>Please Input your answers below!</p>
-			<!-- inputs... -->
-		</form>
-		
-		<div id="madlib-output">
-		</div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<!-- Optionally include other scripts
+        <!-- Add your site or application content here -->
+        <header>
+            <div class="wrapper-page">
+        	   <h1>Jam with Jack Black</h1>
+                <p>by: <em>Shreyas</em></p>
+            </div>
+        </header>
+        <section id="wrapper-form">
+
+            <div class="wrapper-page">
+
+
+            	<form class="generalform" action="#" id="madlib-input">
+            		<fieldset>
+            			<legend>Mr S</legend>
+            			<ul class="generallist">
+            				<li>
+            					<label for="field-txt">Your Favorite Teacher <em>(alphanumeric)</em></label>
+            					<input type="text" id="field-txt" required="required" pattern="^[a-zA-Z0-9_\s]*$">
+            				</li>
+            				<li>
+            					<label for="field-num">Favorite Number <em>(num)</em></label>
+            					<input type="number" id="field-num" required="required" pattern="^[0-9]*$">
+            				</li>
+            				<li>
+            					<label>Favorite pet</label>
+            					<ol class="generallist">
+            						<li>
+            							<label for="field-rad-1">Cat</label>
+            							<input type="radio" id="field-rad-1" value="cat">
+            						</li>
+            						<li>
+            							<label for="field-rad-2">Dog</label>
+            							<input type="radio" id="field-rad-2" value="dog">
+            						</li>
+            					</ol>
+            				</li>
+            			</ul>
+            			</fieldset>
+            			<fieldset>
+            				<legend>Your Jam</legend>
+            				<ul class="generallist">
+            					<li>
+            						<label for="field-dropdown">What do you do</label>
+            						<select id="field-dropdown">
+            							<option value="-">--</option>
+            							<option value="rock">Rock</option>
+            							<option value="information">Information</option>
+            						</select>
+            					</li>
+            				</ul>
+            			</fieldset>
+            			<fieldset class="fieldgroup-sub">
+            				<input type="submit" value="Submit">
+            			</fieldset>
+            		</form>
+                </div>
+        	</section>
+        <section id="wrapper-story">
+
+            <div class="wrapper-page">
+            	<article id="wrapper-madlib">
+            		<p>Baby we was making straight A's, But we was stuck in a dumb daze, Don't take much to memorize your life, I feel like I've been hypnotisized, and then that <span class="val-teacher">magic man</span> <span class="val-teacher">he</span> come to town, whoo wee, <span class="val-teacher">he</span> done spone my head around, <span class="val-teacher">he</span> said recess is in session, <span class="val-favnum">Two</span> and <span class="val-favnum">two</span> make <span class="val-favnumadd">five</span>, and now baby, oh I'm alive, oh yeah, I'm alive.</p>
+            		<p>And if you wanna be the teacher's <span class="val-petname">pet</span> , Well baby you just better forget it, <span class="val-jamname">Rock</span> got no reason, <span class="val-jamname">Rock</span> got no rhyme, You better get me to school on time.</p>
+            		<p>Oh you know I'm was on the Honor Roll, got good grades, and got no soul, raise my hand before I can speak my mind, I've been biting my tongue too many times, And then that <span class="val-teacher">magic man</span> said to obey, (uh huh), do what <span class="val-teacher">magic man</span> do, not what <span class="val-teacher">magic man</span> say, Now could I please have the attention of the class, today's assignment, <strong>KICK SOME <span class="val-jamname">rock</span> ASS!</strong></p>
+            		<p>This is my final exam, now ya'll know who I am, I might not be that perfect son, but ya'll be <span class="val-jamname">rock</span>ing when I'm done.</p>
+            	</article>
+                <article id="wrapper-vid">
+                    <iframe width="420" height="315" src="//www.youtube.com/embed/dTkVxwVn6-E" frameborder="0" allowfullscreen></iframe>
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        
+        <!-- included so that console.log doesn't give error in IE -->
+        <script src="js/plugins.js"></script> 
         <script src="js/main.js"></script>
-		-->
 
-        <!-- You may add Javascript functions below -->
-        <script>
-			function validate() {
-				if ($("input:first").val() == "correct") {
-					$("#madlib-output").text("input: correct");
-				} else {
-					alert("Error!");
-				}
-				return false;
-			}
-
-			$(document).ready(function() {
-				$("#madlib-input").submit(validate);
-				console.log("ready!");
-			});
-        </script>
+       
     </body>
 </html>
