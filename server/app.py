@@ -48,6 +48,31 @@ def wiki_put():
     db['wiki'] = wikipedia
     return "Stored wiki => " + wikipedia
 
+
+
+###
+# Wiki Resource:
+# GET method will redirect to the resource stored by PUT, by default: Wikipedia.org
+# POST/PUT method will update the redirect destination
+###
+@app.route('/shorts', methods=['GET'])
+def short_get():
+    """
+    Redirect to the shortened url
+    """
+    destination = db.get('wiki', 'http://en.wikipedia.org')
+    app.logger.debug("Redirecting to " + destination)
+    return flask.redirect(destination)
+
+@app.route("/shorts", methods=['PUT', 'POST'])
+def short_put():
+    """
+    create a shortened url for the link
+    """
+    wikipedia = request.form.get('url', 'http://en.wikipedia.org')
+    db['wiki'] = wikipedia
+    return "Stored wiki => " + wikipedia
+
 ###
 # i253 Resource:
 # Information on the i253 class. Can be parameterized with `relationship`,
