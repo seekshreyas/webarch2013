@@ -60,7 +60,7 @@ def short_get():
     """
     Redirect to the shortened url
     """
-    destination = db.get('wiki', 'http://en.wikipedia.org')
+    destination = db.get('url', '')
     app.logger.debug("Redirecting to " + destination)
     return flask.redirect(destination)
 
@@ -69,9 +69,17 @@ def short_put():
     """
     create a shortened url for the link
     """
-    wikipedia = request.form.get('url', 'http://en.wikipedia.org')
-    db['wiki'] = wikipedia
-    return "Stored wiki => " + wikipedia
+    shorturl = request.form.get('short', '')
+
+    if db.get(shorturl) == None:
+        longurl = request.form.get('long', '')
+        db[shorturl] = longurl
+
+        app.logger.debug("Successfully created:" + shorturl + longurl)
+    else:
+        app.logger.debug("Short URL already exists " + shorturl + db[shorturl])
+
+    return "Stored short url => " + shorturl + db[shorturl]
 
 ###
 # i253 Resource:
