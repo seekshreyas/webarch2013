@@ -71,12 +71,14 @@ def short_put():
     """
     shorturl = str(request.form['s'])
     longurl = str(request.form['l'])
-    db[shorturl] = longurl
 
-    app.logger.debug("Variables:" + shorturl + longurl)
+    if db[shorturl] == None:
+        # shortened url already exists
+        return "Short URL already exists.Choose another"
+    else:
+        db[shorturl] = longurl
 
-
-    return "Stored short url => " + shorturl + db[shorturl]
+    return db[shorturl] + " => " + shorturl
 
 ###
 # i253 Resource:
