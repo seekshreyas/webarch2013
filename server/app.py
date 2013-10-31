@@ -60,7 +60,7 @@ def short_get():
     """
     Redirect to the shortened url
     """
-    destination = db.get('url', '')
+    destination = db.get('url', 'www.google.com')
     app.logger.debug("Redirecting to " + destination)
     return flask.redirect(destination)
 
