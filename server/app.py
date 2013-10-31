@@ -69,12 +69,11 @@ def short_put():
     """
     create a shortened url for the link
     """
-    shorturl = request.form['s']
-
-    longurl = request.form['l']
+    shorturl = str(request.form['s'])
+    longurl = str(request.form['l'])
     db[shorturl] = longurl
 
-    app.logger.debug("Successfully created:" + shorturl + longurl)
+    app.logger.debug("Variables:" + shorturl + longurl)
 
 
     return "Stored short url => " + shorturl + db[shorturl]
