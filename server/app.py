@@ -69,15 +69,13 @@ def short_put():
     """
     create a shortened url for the link
     """
-    shorturl = request.form.get('short', '')
+    shorturl = request.form['s']
 
-    if db.get(shorturl) == None:
-        longurl = request.form.get('long', '')
-        db[shorturl] = longurl
+    longurl = request.form['l']
+    db[shorturl] = longurl
 
-        app.logger.debug("Successfully created:" + shorturl + longurl)
-    else:
-        app.logger.debug("Short URL already exists " + shorturl + db[shorturl])
+    app.logger.debug("Successfully created:" + shorturl + longurl)
+
 
     return "Stored short url => " + shorturl + db[shorturl]
 
