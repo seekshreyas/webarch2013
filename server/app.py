@@ -65,7 +65,7 @@ def short_get(surl):
     if db.has_key(shorturl):
         app.logger.debug("Redirect to =>" + db[shorturl])
 
-        return flask.redirect(db[shorturl])
+        return flask.redirect("http://" + db[shorturl])
     else:
         return "Short url doesn't exist"
 
