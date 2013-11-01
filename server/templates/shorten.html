@@ -33,11 +33,11 @@
         			<ul class="generallist">
         				<li>
         					<label for="field-long">Long URL</label>
-        					<input type="text" id="field-long" name="l">
+        					<input type="text" id="field-long" name="l" pattern="^[a-zA-Z0-9_-]*$" required>
         				</li>
         				<li>
         					<label for="field-short">Short URL</label>
-        					<input type="text" id="field-short" name="s">
+        					<input type="text" id="field-short" name="s" pattern="^[a-zA-Z0-9_-]*$" required>
         				</li>
         				
         			</ul>
