@@ -18,7 +18,7 @@ MADLIB = (function(){
 	//Event Handler
 	function evtHandler(){
 		jQuery('#madlib-input').submit(function(event){
-			event.preventDefault();
+			// event.preventDefault();
 			
 			validateForm(jQuery(this));
 		});
