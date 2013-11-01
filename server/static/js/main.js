@@ -16,7 +16,7 @@ MADLIB = (function(){
 		jQuery('#madlib-input').submit(function(event){
 			event.preventDefault();
 			
-			validateForm(jQuery(this));
+			// validateForm(jQuery(this));
 		});
 	}
 
@@ -24,7 +24,7 @@ MADLIB = (function(){
 	function validateForm(elem){
 		// caching element selection for DOM seek efficiency
 		// console.log(elem);
-		jQuery('#madlib-input').submit();
+		// jQuery('#madlib-input').submit();
 	
 	}
 
