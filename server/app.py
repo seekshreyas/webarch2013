@@ -56,7 +56,7 @@ def wiki_put():
 # POST/PUT method will update the redirect destination
 ###
 @app.route('/shorts', methods=['GET'])
-def shorts(surl):
+def shorts():
     """
     Redirect to the shortened url
     """
