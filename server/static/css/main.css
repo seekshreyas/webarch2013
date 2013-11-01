@@ -105,7 +105,7 @@ textarea {
 /*fonts*/
 @font-face{    
   font-family: 'OpenSans Regular';
-  src: url('static/resources/fonts/opensans/opensans_regular.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_regular.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Bold';
