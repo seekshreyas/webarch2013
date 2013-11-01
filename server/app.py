@@ -6,6 +6,8 @@ import flask
 from flask import request
 from os import environ
 
+import re
+
 app = flask.Flask(__name__)
 app.debug = True
 
@@ -95,6 +97,8 @@ def short_put():
     longurl = str(request.form['l'])
 
 
+
+
     msg = {}
     if db.has_key(shorturl):
         msg['type'] = 'ERROR'
@@ -102,6 +106,8 @@ def short_put():
 
 
     else:
+
+        longurl = re.match(r'(?:\w*://)?(?:.*\.)?([a-zA-Z-1-9]*\.[a-zA-Z]{1,}).*', longurl).groups()[0]
 
         db[shorturl] = longurl
 
