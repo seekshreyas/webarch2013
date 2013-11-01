@@ -246,6 +246,7 @@ header{
         margin:1em;
         background:#fff;
         padding:0.5em;
+        border:1px solid #bfbfbf;
     }
 
         .generalform ul > li{
@@ -274,6 +275,14 @@ header{
                 margin:0;
                 padding:0;
             }
+
+/*form*/
+#madlib-input{
+    width:50%;
+    margin:0 20%;
+
+}
+
 
 
 

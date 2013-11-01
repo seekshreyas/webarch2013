@@ -29,17 +29,17 @@ MADLIB = (function(){
 		//caching element selection for DOM seek efficiency
 		// console.log(elem);	
 
-		if (!jQuery('input[type=radio]').is(':checked')){
-			alert("radio button not selected");
-		}
-		else{
-			if (jQuery('#field-dropdown').val() == "-"){
-				alert("please select a dropdown item");
-			}
-			else{
-				renderOutput();
-			}
-		}
+		// if (!jQuery('input[type=radio]').is(':checked')){
+		// 	alert("radio button not selected");
+		// }
+		// else{
+		// 	if (jQuery('#field-dropdown').val() == "-"){
+		// 		alert("please select a dropdown item");
+		// 	}
+		// 	else{
+		// 		renderOutput();
+		// 	}
+		// }
 
 	}
 
