@@ -109,39 +109,39 @@ textarea {
 }
 @font-face{    
   font-family: 'OpenSans Bold';
-  src: url('static/resources/fonts/opensans/opensans_bold.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_bold.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Bold Italic';
-  src: url('static/resources/fonts/opensans/opensans_bold_italic.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_bold_italic.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Extra Bold';
-  src: url('static/resources/fonts/opensans/opensans_extra_bold.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_extra_bold.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Extra Bold Italic';
-  src: url('static/resources/fonts/opensans/opensans_extra_bold_italic.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_extra_bold_italic.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Italic';
-  src: url('static/resources/fonts/opensans/opensans_italic.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_italic.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Light';
-  src: url('static/resources/fonts/opensans/opensans_light.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_light.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Light Italic';
-  src: url('static/resources/fonts/opensans/opensans_light_italic.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_light_italic.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Semi Bold';
-  src: url('static/resources/fonts/opensans/opensans_semibold.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_semibold.ttf') format('truetype'); 
 }
 @font-face{    
   font-family: 'OpenSans Semi Bold Italic';
-  src: url('static/resources/fonts/opensans/opensans_semibold_italic.ttf') format('truetype'); 
+  src: url('../resources/fonts/opensans/opensans_semibold_italic.ttf') format('truetype'); 
 }
 
 body{
