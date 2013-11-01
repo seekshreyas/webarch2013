@@ -28,7 +28,7 @@ MADLIB = (function(){
 			console.log(lurl);
 
 			if (re.test(lurl)){
-				jQuery(this).submit();
+				jQuery(this).unbind('submit').submit();
 			}else{
 				alert("long url not in correct format");
 			}
