@@ -21,7 +21,7 @@ MADLIB = (function(){
 		jQuery('#madlib-input').submit(function(event){
 			event.preventDefault();
 
-			lurl = jQuery('#field-long').val()
+			lurl = jQuery('#field-long').val();
 
 			console.log(lurl);
 			
