@@ -6,13 +6,9 @@ MADLIB = (function(){
 	var init = function(){
 		console.log("page loaded");
 
-		parseLyrics();
+		// parseLyrics();
 		evtHandler();
 	};
-
-
-	
-
 
 
 	//Event Handler
@@ -33,36 +29,6 @@ MADLIB = (function(){
 	}
 
 
-	function renderOutput(){
-		
-
-		var formval = getFormVal();
-
-		console.log(formval);
-
-		jQuery('.val-teacher').each(function(){
-			jQuery(this).html(formval.teachname);
-		});
-
-		jQuery('.val-favnum').each(function(){
-			jQuery(this).html(formval.favnum);
-		});
-		jQuery('.val-favnumadd').each(function(){
-			jQuery(this).html(formval.favnum*2 + 1);
-		});
-		jQuery('.val-petname').html(formval.petname);
-
-		jQuery('.val-jamname').each(function(){
-			jQuery(this).html(formval.jamname);
-		});
-
-
-		jQuery('#wrapper-story').fadeIn(200);
-	}
-
-
-
-
 
 	function getFormVal(){
 		
@@ -75,26 +41,6 @@ MADLIB = (function(){
 		};
 
 	}
-
-	
-
-	//to show prettier lyrics
-	//I love this song. it deserves proper respect of being 
-	//displayed right :)
-	function parseLyrics(){
-		
-		jQuery('#wrapper-madlib p').each(function(){
-
-			var lyric = jQuery(this).html();
-
-			var re = new RegExp(",", 'g');
-
-			newlyric = lyric.replace(re, "<br />");
-
-			jQuery(this).html(newlyric);
-		});
-	}
-
 
 
 	return {
