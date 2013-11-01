@@ -72,14 +72,11 @@ def short_put():
     shorturl = str(request.form['s'])
     longurl = str(request.form['l'])
 
-    try:
-        db[shorturl] = longurl
-    except:
-        # None
-        # short url already exists
+    if db.has_key(shorturl):
         return "Short URL already exists.Choose another"
-
-    return db[shorturl] + " => " + shorturl
+    else:
+        db[shorturl] = longurl
+        return db[shorturl] + " => " + shorturl
 
 ###
 # i253 Resource:
