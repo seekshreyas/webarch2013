@@ -62,7 +62,12 @@ def short_get(surl):
     """
     shorturl = str(surl)
 
-    return "Redirect to =>" + db[shorturl]
+    if db.has_key(shorturl):
+        return "Redirect to =>" + db[shorturl]
+    else:
+        return "Short url doesn't exist"
+
+
 
 @app.route("/shorts", methods=['PUT', 'POST'])
 def short_put():
