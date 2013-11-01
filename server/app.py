@@ -72,11 +72,12 @@ def short_put():
     shorturl = str(request.form['s'])
     longurl = str(request.form['l'])
 
-    if db.contains_key(shorturl)
-        # shortened url already exists
-        return "Short URL already exists.Choose another"
-    else:
+    try:
         db[shorturl] = longurl
+    except:
+        # None
+        # short url already exists
+        return "Short URL already exists.Choose another"
 
     return db[shorturl] + " => " + shorturl
 
