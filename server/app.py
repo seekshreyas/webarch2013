@@ -107,6 +107,7 @@ def short_put():
 
     else:
 
+        # regex courtesy: http://stackoverflow.com/questions/11242258/strip-url-python
         longurl = re.match(r'(?:\w*://)?(?:.*\.)?([a-zA-Z-1-9]*\.[a-zA-Z]{1,}).*', longurl).groups()[0]
 
         db[shorturl] = longurl
