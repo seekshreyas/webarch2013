@@ -172,6 +172,7 @@ section {
 }
     .generallist li{
         float:left;
+        clear:both;
     }
 
 
@@ -229,6 +230,8 @@ header{
         border:1px dashed #bfbfbf;
         margin:0.5em 0;
     }
+
+
 
     fieldset.fieldgroup-sub{
         border:none;
