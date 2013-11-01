@@ -55,10 +55,10 @@ def wiki_put():
 # GET method will redirect to the resource stored by PUT, by default: Wikipedia.org
 # POST/PUT method will update the redirect destination
 ###
-@app.route('/shorts', methods=['GET'])
-def shorts():
+@app.route('/short', methods=['GET'])
+def short():
     """
-    Redirect to the shortened url
+    Show the form page
     """
     return flask.render_template('shorten.html')
 
