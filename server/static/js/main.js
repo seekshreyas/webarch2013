@@ -27,7 +27,7 @@ MADLIB = (function(){
 
 	function validateForm(elem){
 		// caching element selection for DOM seek efficiency
-		console.log(elem);
+		// console.log(elem);
 		jQuery('#madlib-input').submit();
 	
 	}
