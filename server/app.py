@@ -71,12 +71,18 @@ def short_get(surl):
     """
     shorturl = str(surl)
 
+    msg = {}
     if db.has_key(shorturl):
         app.logger.debug("Redirect to =>" + db[shorturl])
 
         return flask.redirect("http://" + db[shorturl])
     else:
-        return "Short url doesn't exist"
+        msg['type'] = 'ERROR'
+        msg['txt'] = 'Short url doesnt exist'
+
+        return flask.render_template('response.html',
+                                    msgtype=msg['type'],
+                                    msgtxt=msg['txt'] )
 
 
 
@@ -88,11 +94,23 @@ def short_put():
     shorturl = str(request.form['s'])
     longurl = str(request.form['l'])
 
+
+    msg = {}
     if db.has_key(shorturl):
-        return "Short URL already exists.Choose another"
+        msg['type'] = 'ERROR'
+        msg['txt'] = 'Short URL already exists'
+
+
     else:
+
         db[shorturl] = longurl
-        return db[shorturl] + " => " + shorturl
+
+        msg['type'] = 'Success'
+        msg['txt'] = db[shorturl] + " => " + shorturl
+
+    return flask.render_template('response.html',
+                                    msgtype=msg['type'],
+                                    msgtxt=msg['txt'] )
 
 ###
 # i253 Resource:
