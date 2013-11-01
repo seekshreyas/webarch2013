@@ -55,7 +55,7 @@ def wiki_put():
 # GET method will redirect to the resource stored by PUT, by default: Wikipedia.org
 # POST/PUT method will update the redirect destination
 ###
-@app.route('/short', methods=['GET'])
+@app.route('/shorts', methods=['GET'])
 def short():
     """
     Show the form page
