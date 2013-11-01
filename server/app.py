@@ -60,8 +60,9 @@ def short_get(surl):
     """
     Redirect to the shortened url
     """
+    shorturl = str(surl)
 
-    return "Redirect to =>" + db[str(surl)]
+    return "Redirect to =>" + db[shorturl]
 
 @app.route("/shorts", methods=['PUT', 'POST'])
 def short_put():
