@@ -18,7 +18,7 @@ MADLIB = (function(){
 	//Event Handler
 	function evtHandler(){
 		jQuery('#madlib-input').submit(function(event){
-			// event.preventDefault();
+			event.preventDefault();
 			
 			validateForm(jQuery(this));
 		});
@@ -26,20 +26,20 @@ MADLIB = (function(){
 
 
 	function validateForm(elem){
-		//caching element selection for DOM seek efficiency
-		// console.log(elem);	
+		// caching element selection for DOM seek efficiency
+		console.log(elem);	
 
-		// if (!jQuery('input[type=radio]').is(':checked')){
-		// 	alert("radio button not selected");
-		// }
-		// else{
-		// 	if (jQuery('#field-dropdown').val() == "-"){
-		// 		alert("please select a dropdown item");
-		// 	}
-		// 	else{
-		// 		renderOutput();
-		// 	}
-		// }
+		if (!jQuery('input[type=radio]').is(':checked')){
+			alert("radio button not selected");
+		}
+		else{
+			if (jQuery('#field-dropdown').val() == "-"){
+				alert("please select a dropdown item");
+			}
+			else{
+				jQuery('#madlib-input').submit()
+			}
+		}
 
 	}
 
@@ -70,6 +70,9 @@ MADLIB = (function(){
 
 		jQuery('#wrapper-story').fadeIn(200);
 	}
+
+
+
 
 
 	function getFormVal(){
