@@ -10,6 +10,10 @@ Run:
 ----
 $ python top_users.py user-visits_msweb.data
 
+Store:
+----
+$ python top_users.py user-visits_msweb.data > top_users.data
+
 author = "Shreyas"
 email = "shreyas@ischool.berkeley.edu"
 python_version = "Python 2.7.5 :: Anaconda 1.6.1 (x86_64)"
@@ -36,4 +40,5 @@ class Topusers(MRJob):
 
 
 if __name__ == '__main__':
+    # print __doc__
     Topusers.run()
