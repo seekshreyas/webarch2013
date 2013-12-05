@@ -40,7 +40,7 @@ def main():
         elif cell[0] == 'V':
             ###
             # FILL IN by replacing below:
-            pass
+            # pass
             # What should we update when we see a new 'V' row?
             ##/
             cell.append(current_user)
