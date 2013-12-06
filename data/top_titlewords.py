@@ -8,11 +8,11 @@ Top Title Words
 
 Run:
 ----
-$ python top_users.py user-visits_msweb.data
+$ python top_titlewords.py user-visits_msweb.data
 
 Store:
 ----
-$ python top_users.py user-visits_msweb.data > top_users.data
+$ python top_titlewords.py user-visits_msweb.data > top_titlewords.data
 
 author = "Shreyas"
 email = "shreyas@ischool.berkeley.edu"
