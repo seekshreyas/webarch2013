@@ -26,7 +26,9 @@ class Toptitlewords(MRJob):
 
 
     def extract(self, line_no, line):
-        """ Extract users """
+        """
+        Extract words from title
+        """
         cell = csv_readline(line)
 
         if cell[0] == 'A':
@@ -41,27 +43,36 @@ class Toptitlewords(MRJob):
                 yield w.lower(), 1
 
     def combine(self, word, word_counts):
+        """
+        Aggregate Counts for each word
+        """
+
         if word.isalpha() == True:
             total = sum(word_counts)
             yield word, total
 
 
     def distribute(self, word, word_total):
+        """
+        Distribute count and words for each count, word combo
+        """
         yield word_total, word
 
 
     def aggregate(self, word_total, word):
-
+        """
+        Aggregate words for each count
+        """
 
         yield word_total, list(word)
 
 
     def steps(self):
         """
-        mapper1: <line, record> => <user_id, business_id>
-        reducer1: <user_id, business_id> => <user_id, [business_ids]>
-        mapper2: <user_id, [business_ids]> => <KEY, [user_id, business_ids]>
-        reducer2: <KEY, [user_id, business_ids]> => <[user_a, user_b], jaccard>
+        mapper1: <line, title> => <word, 1>
+        reducer1: <word, 1> => <word, count>
+        mapper2: <word, count> => <count, word>
+        reducer2: <count, word> => <count, [word1, word2, ...>
         """
         return [
             self.mr(mapper=self.extract, reducer=self.combine),
