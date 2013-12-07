@@ -64,19 +64,51 @@ class Toptitlewords(MRJob):
         Aggregate words for each count
         """
 
-        yield word_total, list(word)
+        yield word_total, list(set(word))
+
+
+    def splitter(self, count, word_list):
+        """
+        Distribute count and words for each count, word combo
+        """
+        yield "allwords", [count, word_list]
+
+
+    def assembler(self, _, wordcombolist):
+        """
+        Aggregate words for each count
+        """
+        wordcombodict = {}
+
+        for w in wordcombolist:
+            wordcombodict[w[0]] = w[1]
+
+        count = 0
+        for key in reversed(sorted(wordcombodict.iterkeys())):
+            if count < 10:
+                yield key, wordcombodict[key]
+
+            count += 1
+
+
 
 
     def steps(self):
         """
         mapper1: <line, title> => <word, 1>
         reducer1: <word, 1> => <word, count>
+
         mapper2: <word, count> => <count, word>
         reducer2: <count, word> => <count, [word1, word2, ...>
+
+        mapper2: <count, [word1, word2, ...> => <'allwords', [count, [word1, word2,..]] >
+        reducer2: <'allwords', [count, [word1, word2,..]] > => <count, [word1, word2, ...]>
+
         """
         return [
             self.mr(mapper=self.extract, reducer=self.combine),
-            self.mr(mapper=self.distribute, reducer=self.aggregate)
+            self.mr(mapper=self.distribute, reducer=self.aggregate),
+            self.mr(mapper=self.splitter, reducer=self.assembler)
         ]
 
 
