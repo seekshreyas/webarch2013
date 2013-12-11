@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import shelve
+# import shelve
 from subprocess import check_output
 import flask
 from flask import request
@@ -11,21 +11,23 @@ import re
 app = flask.Flask(__name__)
 app.debug = True
 
-db = shelve.open("shorten.db")
+# db = shelve.open("shorten.db")
+
+db = {}
 
 
 ###
 # Home Resource:
 # Only supports the GET method, returns a homepage represented as HTML
 ###
-@app.route('/home', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     """Builds a template based on a GET request, with some default
     arguements"""
     index_title = request.args.get("title", "i253")
     hello_name = request.args.get("name", "Jim")
     return flask.render_template(
-            'home.html',
+            'index.html',
             title=index_title,
             name=hello_name)
 
@@ -39,6 +41,7 @@ def home():
 def wiki_get():
     """Redirects to wikipedia."""
     destination = db.get('wiki', 'http://en.wikipedia.org')
+    # destination = http://en.wikipedia.org'
     app.logger.debug("Redirecting to " + destination)
     return flask.redirect(destination)
 
