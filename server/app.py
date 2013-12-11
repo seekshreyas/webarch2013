@@ -11,9 +11,9 @@ import re
 app = flask.Flask(__name__)
 app.debug = True
 
-# db = shelve.open("shorten.db")
+db = shelve.open("shorten.db")
 
-db = {}
+# db = {}
 
 
 ###
