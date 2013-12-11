@@ -4,7 +4,7 @@ import shelve
 from subprocess import check_output
 import flask
 from flask import request
-from os import environ
+# from os import environ
 
 import re
 
